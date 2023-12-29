@@ -1,7 +1,8 @@
 using DAL.EF;
 using DAL.Entities;
-using DAL.Repositories.Impl;
 using DAL.Repositories.Interfaces;
+
+namespace DAL.Repositories.Impl;
 
 public class TenderRepository
     : BaseRepository<Tender>, ITenderRepository

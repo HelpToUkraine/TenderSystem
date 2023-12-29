@@ -11,9 +11,10 @@ public class EFUnitOfWork : IUnitOfWork
     private TenderContext db;
     private TenderRepository tenderRepository;
     private ProposalRepository proposalRepository;
-    public EFUnitOfWork(DbContextOptions options)
+
+    public EFUnitOfWork(TenderContext context)
     {
-        db = new TenderContext(options);
+        db = context;
     }
     public ITenderRepository Tenders
     {
