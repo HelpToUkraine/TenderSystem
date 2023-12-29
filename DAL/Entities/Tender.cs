@@ -15,7 +15,7 @@ namespace DAL.Entities
         public double Price { get; set; }
         public string Description { get; set; }
         public DateTime Deadline { get; set; }
-        public TenderStatus TenderStatus { get; set; }
+        public TenderStatus Status { get; set; }
         public List<Proposal> Proposals { get; set; }
     }
 }

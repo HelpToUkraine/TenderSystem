@@ -43,7 +43,7 @@ namespace DAL.Tests
                 Price = 230000,
                 Description = "buy Reactor",
                 Deadline = DateTime.Today.AddDays(30),
-                TenderStatus = TenderStatus.Processing,
+                Status = TenderStatus.Processing,
             };
 
             //Act
@@ -69,7 +69,7 @@ namespace DAL.Tests
                 Price = 230000,
                 Description = "buy Reactor",
                 Deadline = DateTime.Today.AddDays(30),
-                TenderStatus = TenderStatus.Processing,
+                Status = TenderStatus.Processing,
                 Proposals = new List<Proposal>(),
             };
             context.Tenders.Add(tender);
@@ -97,7 +97,7 @@ namespace DAL.Tests
                 Price = 230000,
                 Description = "buy Reactor",
                 Deadline = DateTime.Today.AddDays(30),
-                TenderStatus = TenderStatus.Processing,
+                Status = TenderStatus.Processing,
                 Proposals = new List<Proposal>()
             };
             context.Tenders.Add(expectedTender);

@@ -6,7 +6,7 @@ namespace DAL.Repositories.Impl;
 
 public class ProposalRepository : BaseRepository<Proposal>, IProposalRepository
 {
-    public ProposalRepository(TenderContext context)
+    internal ProposalRepository(TenderContext context)
         : base(context)
     {
     }

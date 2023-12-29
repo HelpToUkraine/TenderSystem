@@ -17,6 +17,6 @@ namespace DAL.Entities
         public User Submitter { get; set; }
         public double Price { get; set; }
         public DateTime SubmissionDate { get; set; }
-        public ProposalStatus ProposalStatus { get; set; }
+        public ProposalStatus Status { get; set; }
     }
 }

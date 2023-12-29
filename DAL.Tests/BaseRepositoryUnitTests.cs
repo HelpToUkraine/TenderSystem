@@ -44,10 +44,7 @@ namespace DAL.Tests
             repository.Create(expectedTender);
 
             // Assert
-            mockDbSet.Verify(
-                dbSet => dbSet.Add(
-                    expectedTender
-                    ), Times.Once());
+            mockDbSet.Verify(dbSet => dbSet.Add(expectedTender), Times.Once());
         }
 
         [Fact]
@@ -75,13 +72,8 @@ namespace DAL.Tests
 
             // Assert
             mockDbSet.Verify(
-                dbSet => dbSet.Find(
-                    expectedTender.IdTender
-                    ), Times.Once());
-            mockDbSet.Verify(
-                dbSet => dbSet.Remove(
-                    expectedTender
-                    ), Times.Once());
+                dbSet => dbSet.Find(expectedTender.IdTender), Times.Once());
+            mockDbSet.Verify(dbSet => dbSet.Remove(expectedTender), Times.Once());
         }
 
         [Fact]
@@ -107,10 +99,7 @@ namespace DAL.Tests
             var actualStreet = repository.Get(expectedTender.IdTender);
 
             // Assert
-            mockDbSet.Verify(
-                dbSet => dbSet.Find(
-                    expectedTender.IdTender
-                    ), Times.Once());
+            mockDbSet.Verify(dbSet => dbSet.Find(expectedTender.IdTender), Times.Once());
             Assert.Equal(expectedTender, actualStreet);
         }
 
